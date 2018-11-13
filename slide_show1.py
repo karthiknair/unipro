@@ -6,6 +6,7 @@ import tkinter
 
 from itertools import cycle
 from PIL import Image, ImageTk
+import imtable
 
 
 class Slideshow(tkinter.Tk):
@@ -60,6 +61,9 @@ class Slideshow(tkinter.Tk):
 if __name__ == "__main__":
     slide_interval = 2500
     
+    
+
+
     # use a list
     #images = ["image1.jpg",
               #"image2.jpeg",
@@ -73,9 +77,12 @@ if __name__ == "__main__":
     # http://pillow.readthedocs.io/en/3.3.x/handbook/image-file-formats.html
     import glob
     #images = glob.glob("*.jpg")
-    path = "."
+    
+    x=imtable.l   
+    path = x
     exts = ["jpg", "bmp", "png", "gif", "jpeg"]
-    images = [fn for fn in os.listdir(path) if any(fn.endswith(ext) for ext in exts)]
+    images = imtable.l
+    
 
     # start the slideshow
     slideshow = Slideshow(images, slide_interval)
